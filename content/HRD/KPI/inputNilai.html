@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Penilaian Karyawan</title>
+    <link href="../../../../resources/css/bootstrap.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link href="../../../../resources/css/tes.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+     <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.css"
+  />
+    <link
+      rel="icon"
+      href="../../../../resources/images/asw.png"
+      type="image/icon type"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="../index.html">
+        <img
+          src="../../../../resources/images/asri.png"
+          width="30%"
+          class="d-inline-block align-top"
+          alt="Logo"
+        />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <div class="d-flex align-items-center">
+                <img
+                  src="../../../../resources/images/orang3.jpg"
+                  class="rounded-circle"
+                  alt="User Image"
+                />
+                <div class="user-info ml-2 dropdown-toggle">
+                  <span class="user-name">Kim Minji</span><br />
+                  <span class="user-nik">Head of IT</span>
+                </div>
+              </div>
+            </a>
+            <div
+              class="dropdown-menu dropdown-menu-right bg-light"
+              aria-labelledby="navbarDropdownMenuLink"
+            >
+              <a class="dropdown-item" href="../Profile/profile.html"
+                ><i class="fas fa-user-cog"></i> Pengaturan Profile</a
+              >
+              <a class="dropdown-item text-danger" href="../login.html"
+                ><i class="fas fa-arrow-left"></i> Log Out</a
+              >
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="d-flex" id="wrapper">
+      <!-- Sidebar -->
+      <div class="bg-light border-right" id="sidebar-wrapper">
+        <div
+          class="list-group list-group-flush mt-2"
+          style="border-radius: 10px"
+        >
+          <a
+            href="./kpi.html"
+            class="list-group-item list-group-item-action new-active mb-2"
+            style="border-radius: 10px"
+          >
+            <i class="fas fa-home"></i> Beranda
+          </a>
+        </div>
+      </div>
+
+      <!-- Page Content -->
+      <div id="page-content-wrapper">
+        <div class="container mt-5">
+          <div class="text-dark">
+            <div class="p-5 rounded-3 border col-xl-6 form-izin">
+              <div class="mb-3 text-center">
+                <h1 class="text-danger" style="font-weight: bold;">Penilaian Karyawan</h1>
+              </div>
+              <div class="col-md-6 mb-3 mx-auto">
+            <!-- mx-auto added for centering -->
+          </div>
+              <hr />
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="who" class="form-label">Nama</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="who"
+                    id="who"
+                    placeholder="Nauval"
+                    readonly
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="nik" class="form-label">NIK</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="nik"
+                    id="nik"
+                    placeholder="153-1"
+                    readonly
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="tanggal_pengajuan" class="form-label"
+                    >Tanggal Pengajuan</label
+                  >
+                  <input
+                    class="form-control"
+                    type="date"
+                    name="tanggal_pengajuan"
+                    id="tanggal_pengajuan"
+                    value="2024-07-15"
+                    readonly
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="waktu" class="form-label"
+                    >Waktu</label
+                  >
+                  <input
+                    class="form-control custom-placeholder"
+                    type="time"
+                    name="waktu"
+                    id="waktu"
+                    value="08:00"
+                    readonly
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="penilai" class="form-label"
+                    >Penilai</label
+                  >
+                  <input
+                    class="form-control custom-placeholder"
+                    type="text"
+                    name="penilai"
+                    id="penilai"
+                    value="Kim Minji"
+                    readonly
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="nilai" class="form-label"
+                    >Nilai</label
+                  >
+                  <input
+                    class="form-control custom-placeholder"
+                    type="text"
+                    name="nilai"
+                    id="nilai"
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="semester" class="form-label">Semester</label>
+                  <select
+                    name="semester"
+                    id="semester"
+                    class="form-control"
+                    >
+                    <option >I</option>
+                    <option >II</option>
+                    </select>
+                </div>
+              </div>
+              <div class="mb-3 text-center">
+                <h3 style="font-weight: bold;">Saran Penilai</h3>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-md-7">
+                    <h4>1. Untuk pengembangan, sebagai masukan rencana pelatihan</h4></div>
+                <div class="col-md-6">
+                  <label for="waktu" class="form-label text-danger" style="font-size: 12px;"
+                    >Apa saran yang diperlukan untuk memperbaiki kekurangan bagi karyawan ?</label
+                  >
+                  <input
+                    class="form-control custom-placeholder"
+                    type="text"
+                    name="waktu"
+                    id="waktu"
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="waktu" class="form-label text-danger" style="font-size: 12px;"
+                    >Apa saran yang diperlukan untuk mengembangkan kemampuan khusus yang dimiliki karyawan?</label
+                  >
+                  <input
+                    class="form-control custom-placeholder"
+                    type="text"
+                    name="waktu"
+                    id="waktu"
+                  />
+                </div>
+                <div class="col-md-7">
+                    <h4>2. Untuk Mutasi/Promosi</h4></div>
+                <div class="col-md-6">
+                  <label for="waktu" class="form-label text-danger" style="font-size: 12px;"
+                    >Jabatan mana yang tepat bagi karyawan yang bersangkutan dan apa alasannya ?</label
+                  >
+                  <input
+                    class="form-control custom-placeholder"
+                    type="text"
+                    name="waktu"
+                    id="waktu"
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="waktu" class="form-label text-danger" style="font-size: 12px;"
+                    >Jika karyawan dianggap perlu dipindahkan, jabatan mana yang dirasakan tepat baginya ?</label
+                  >
+                  <input
+                    class="form-control custom-placeholder"
+                    type="text"
+                    name="waktu"
+                    id="waktu"
+                  />
+                </div>
+                <div class="col-md-7">
+                    <h4>3. Target atau tugas yang harus dicapai untuk evaluasi : ( 3/ 6/ 9/12 bulan )</h4></div>
+                <div class="col-md-6 mt-2">
+                  <input
+                    class="form-control custom-placeholder"
+                    type="text"
+                    name="waktu"
+                    id="waktu"
+                  />
+                </div>
+              </div>
+              <div class="col-md-10 mb-3 mx-auto">
+              <div class="row">
+                <div class="col-md-6 col-6 text-center">
+                  <a
+                    href="./kpi.html"
+                    class="btn btn-outline-danger btn-lg mt-3"
+                  >
+                    <i class="fa fa-arrow-left me-2"></i> Cancel
+                  </a>
+                </div>
+                <div class="col-md-6 col-6 text-center">
+                  <a href="./kpi.html" class="btn btn-success btn-lg mt-3">
+                    <i class="fa fa-check me-2"></i> Save
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+    <script src="../../../../resources/js/jquery.js"></script>
+    <script src="../../../../resources/js/popper.min.js"></script>
+    <script src="../../../../resources/js/bootstrap.min.js"></script>
+    <script src="../../../../resources/js/izin.js"></script>
+    <script>
+      document.querySelector('.btn-success').addEventListener('click', function(event) {
+        event.preventDefault(); // Mencegah tindakan default tombol
+        swal({
+          title: "Penilaian Berhasil!",
+          text: "Penilaian Karyawan telah ditambahkan!",
+          icon: "success",
+          button: "OK"
+        }).then(() => {
+          window.location.href = "./kpi.html";
+        });
+      });
+    </script>
+    <script>
+      // JavaScript to toggle sidebar visibility
+      $(document).ready(function () {
+        $(".navbar-toggler").click(function () {
+          $("#wrapper").toggleClass("toggled");
+        });
+      });
+    </script>
+  </body>
+</html>

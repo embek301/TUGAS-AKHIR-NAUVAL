@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asri Motor Single Window</title>
+    <link href="../../../resources/css/bootstrap.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link href="../../../resources/css/styles.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="../../../resources/images/asw.png"
+      type="image/icon type"
+    />
+    <style>
+      .reduce-margin {
+        margin-top: 10px; /* Adjust the value as needed */
+      }
+      .form-group {
+        margin-bottom: 0.5rem; /* Reduce the margin between form groups */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="../index.html">
+        <img
+          src="../../../resources/images/asri.png"
+          width="30%"
+          class="d-inline-block align-top"
+          alt="Logo"
+        />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <div class="d-flex align-items-center">
+                <img
+                  src="../../../resources/images/orang3.jpg"
+                  class="rounded-circle"
+                  alt="User Image"
+                />
+                <div class="user-info ml-2 dropdown-toggle">
+                  <span class="user-name">Kim Minji</span><br />
+                  <span class="user-nik">Head of IT</span>
+                </div>
+              </div>
+            </a>
+            <div
+              class="dropdown-menu dropdown-menu-right bg-light"
+              aria-labelledby="navbarDropdownMenuLink"
+            >
+              <a class="dropdown-item" href="./profile.html"
+                ><i class="fas fa-user-cog"></i> Pengaturan Profile</a
+              >
+              <a class="dropdown-item text-danger" href="../login.html"
+                ><i class="fas fa-arrow-left"></i> Log Out</a
+              >
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="d-flex" id="wrapper">
+      <!-- Sidebar -->
+      <div class="bg-light border-right" id="sidebar-wrapper">
+        <div
+          class="list-group list-group-flush mt-2"
+          style="border-radius: 10px"
+        >
+          <a
+            href="./profile.html"
+            class="list-group-item list-group-item-action mb-2 new-active"
+            style="border-radius: 10px"
+          >
+            <i class="fas fa-user-cog"></i> Profile
+          </a>
+          <a
+            href="./gantiPassword.html"
+            class="list-group-item list-group-item-action mb-2"
+            style="border-radius: 10px"
+          >
+            <i class="fas fa-cog"></i> Ganti Password
+          </a>
+        </div>
+      </div>
+
+      <!-- Page Content -->
+      <div id="page-content-wrapper">
+        <div class="container mt-5">
+          <h1 style="font-weight: bold">Biodata</h1>
+          <div class="row">
+            <div class="col-md-4">
+              <h5 class="text-danger">Data Perusahaan</h5>
+              <form>
+                <div class="form-group">
+                  <label for="input1">NIK</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="input1"
+                    name="input1"
+                    value="153-1"
+                    readonly
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="input2">Jabatan</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="input2"
+                    name="input2"
+                    value="Head of IT"
+                    readonly
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="input3">Departement</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="input3"
+                    name="input3"
+                    value="Information System And Technology"
+                    readonly
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="input4">Status</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="input4"
+                    name="input4"
+                    value="Karyawan Tetap"
+                    readonly
+                  />
+                </div>
+              </form>
+            </div>
+            <div class="col-md-4">
+              <img
+                src="../../../resources/images/orang3.jpg"
+                class="img-fluid"
+                id="profile-picture"
+                alt="Profile Picture"
+                style="max-height: 100%; border-radius: 10px; max-width: 100%"
+              />
+              <div class="mt-2">
+                <label for="upload-file" class="btn btn-primary btn-sm">
+                  <i class="fas fa-upload"></i> Ganti Foto
+                </label>
+                <input
+                  type="file"
+                  id="upload-file"
+                  name="upload-file"
+                  style="display: none"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- New Row -->
+          <h5 class="text-danger">Data Pribadi</h5>
+          <div class="row reduce-margin mb-5">
+            <div class="col-md-4">
+              <form>
+                <div class="form-group">
+                  <label for="input5">Nama Lengkap</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="input5"
+                    name="input5"
+                    value="Kim Minji"
+                    readonly
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="input6">Alamat</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="input6"
+                    name="input6"
+                    value="Gangwong GG.5"
+                    readonly
+                  />
+                </div>
+              </form>
+            </div>
+            <div class="col-md-5">
+              <form>
+                <div class="form-group">
+                  <label for="input7">Tempat Tanggal Lahir</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="input7"
+                    name="input7"
+                    value="Gangwon, 7 Mei 2024"
+                    readonly
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="input8">Provinsi</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="input8"
+                    name="input8"
+                    value="Chuncheon"
+                    readonly
+                  />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+    <script src="../../../resources/js/jquery.js"></script>
+    <script src="../../../resources/js/popper.min.js"></script>
+    <script src="../../../resources/js/bootstrap.min.js"></script>
+    <script>
+      // JavaScript to toggle sidebar visibility
+      $(document).ready(function () {
+        $(".navbar-toggler").click(function () {
+          $("#wrapper").toggleClass("toggled");
+        });
+      });
+    </script>
+  </body>
+</html>

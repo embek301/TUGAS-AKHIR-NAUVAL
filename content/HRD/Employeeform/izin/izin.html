@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Form Izin</title>
+    <link href="../../../../resources/css/bootstrap.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link href="../../../../resources/css/tes.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="../../../../resources/images/asw.png"
+      type="image/icon type"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="../../index.html">
+        <img
+          src="../../../../resources/images/asri.png"
+          width="30%"
+          class="d-inline-block align-top"
+          alt="Logo"
+        />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <div class="d-flex align-items-center">
+                <img
+                  src="../../../../resources/images/orang3.jpg"
+                  class="rounded-circle"
+                  alt="User Image"
+                />
+                <div class="user-info ml-2 dropdown-toggle">
+                  <span class="user-name">Kim Minji</span><br />
+                  <span class="user-nik">HRD</span>
+                </div>
+              </div>
+            </a>
+            <div
+              class="dropdown-menu dropdown-menu-right bg-light"
+              aria-labelledby="navbarDropdownMenuLink"
+            >
+              <a class="dropdown-item" href="#"
+                ><i class="fas fa-user-cog"></i> Pengaturan Profile</a
+              >
+              <a class="dropdown-item text-danger" href="../../login.html"
+                ><i class="fas fa-arrow-left"></i> Log Out</a
+              >
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="d-flex" id="wrapper">
+      <!-- Sidebar -->
+      <div class="bg-light border-right" id="sidebar-wrapper">
+        <div
+          class="list-group list-group-flush mt-2"
+          style="border-radius: 10px"
+        >
+          <a
+            href="../employeeForm.html"
+            class="list-group-item list-group-item-action mb-2"
+            style="border-radius: 10px"
+          >
+            <i class="fas fa-home"></i> Beranda
+          </a>
+          <a
+            href="#"
+            class="list-group-item list-group-item-action mb-2 toggle-submenu new-active"
+            style="border-radius: 10px"
+          >
+            <i class="fas fa-envelope"></i> Izin
+          </a>
+          <a
+            href="../cuti/cuti.html"
+            class="list-group-item list-group-item-action mb-2"
+            style="border-radius: 10px"
+          >
+            <i class="fas fa-envelope"></i> Cuti
+          </a>
+          <a
+            href="../laporan/dataLaporan.html"
+            class="list-group-item list-group-item-action mb-2"
+            style="border-radius: 10px"
+          >
+            <i class="fas fa-clipboard-list"></i> Data Laporan
+          </a>
+        </div>
+      </div>
+
+      <!-- Page Content -->
+      <div id="page-content-wrapper">
+        <div class="container mt-5">
+          <div class="p-5 rounded-3 border col-xl-6 form-izin">
+          <h1 class="text-center text-danger" style="font-weight: bold;">New Form Izin</h1>
+          <div class="col-md-6 mb-3 mx-auto">
+            <!-- mx-auto added for centering -->
+            <select
+              name="jenisIzin"
+              id="jenisIzin"
+              class="form-control"
+              onchange="redirectToSelectedPage()"
+            >
+              <option value="izin.html">Pilih Jenis Izin</option>
+              <option value="izinSakit.html">Izin Sakit</option>
+              <option value="izinCuti.html">Izin Cuti</option>
+              <option value="izinTidakMasuk.html">Izin Tidak Masuk</option>
+              <option value="izinKhusus.html">Izin Khusus</option>
+            </select>
+          </div>
+          <hr />
+          <script src="../../../../resources/js/izin.js"></script>
+
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="who" class="form-label">Nama</label>
+              <input
+                class="form-control"
+                type="text"
+                name="who"
+                id="who"
+                placeholder="Nauval Alfarisi"
+                readonly
+              />
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="nik" class="form-label">NIK</label>
+              <input
+                class="form-control"
+                type="text"
+                name="nik"
+                id="nik"
+                placeholder="1204200211"
+                readonly
+              />
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="tanggal" class="form-label">Tanggal</label>
+              <input
+                class="form-control custom-placeholder"
+                type="date"
+                name="tanggal"
+                id="tanggal"
+                readonly
+              />
+            </div>
+             
+            <div class="col-md-6 mb-3">
+              <label for="waktu" class="form-label">Waktu</label>
+              <input
+                class="form-control custom-placeholder"
+                type="time"
+                name="waktu"
+                id="waktu"
+                readonly
+              />
+            </div>
+             <div class="col-md-6 mb-3">
+              <a href="employeeForm.html" class="btn btn-danger btn-lg mt-3">
+                <i class="fa fa-arrow-left me-2"></i> Kembali
+              </a>
+             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../../../resources/js/jquery.js"></script>
+    <script src="../../../../resources/js/popper.min.js"></script>
+    <script src="../../../../resources/js/bootstrap.min.js"></script>
+    <script src="../../../../resources/js/izin.js"></script>
+    <script src="../../../../resources/js/sakit.js"></script>
+    <script>
+      // JavaScript to toggle sidebar visibility
+      $(document).ready(function () {
+        $(".navbar-toggler").click(function () {
+          $("#wrapper").toggleClass("toggled");
+        });
+      });
+    </script>
+  </body>
+</html>

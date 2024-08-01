@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>List Customer</title>
+    <link rel="stylesheet" href="../../../resources/css/bootstrap.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.css"
+    />
+    <link href="../../../resources/css/tes.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="../../../resources/images/asw.png"
+      type="image/icon type"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="../index.html">
+        <img
+          src="../../../resources/images/asri.png"
+          width="30%"
+          class="d-inline-block align-top"
+          alt="Logo"
+        />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <div class="d-flex align-items-center">
+                <img
+                  src="../../../resources/images/orang3.jpg"
+                  class="rounded-circle"
+                  alt="User Image"
+                />
+                <div class="user-info ml-2 dropdown-toggle">
+                  <span class="user-name">Kim Minji</span><br />
+                  <span class="user-nik">Marketing Sales</span>
+                </div>
+              </div>
+            </a>
+            <div
+              class="dropdown-menu dropdown-menu-right bg-light"
+              aria-labelledby="navbarDropdownMenuLink"
+            >
+              <a class="dropdown-item" href="../Profile/profile.html"
+                ><i class="fas fa-user-cog"></i> Pengaturan Profile</a
+              >
+              <a class="dropdown-item text-danger" href="../login.html"
+                ><i class="fas fa-arrow-left"></i> Log Out</a
+              >
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="d-flex" id="wrapper">
+      <!-- Sidebar -->
+      <div class="bg-light border-right" id="sidebar-wrapper">
+        <div
+          class="list-group list-group-flush mt-2"
+          style="border-radius: 10px"
+        >
+          <a
+            href="customerCard.html"
+            class="list-group-item list-group-item-action mb-2"
+            style="border-radius: 10px"
+          >
+            <i class="fas fa-home"></i> Beranda
+          </a>
+          <a
+            href="./listCustomer.html"
+            class="list-group-item list-group-item-action mb-2 new-active"
+            style="border-radius: 10px"
+          >
+            <i class="fas fa-user"></i> List Customer
+          </a>
+        </div>
+      </div>
+
+      <!-- Page Content -->
+      <div id="page-content-wrapper">
+        <div class="container container-fluid mt-5">
+          <h5>List Customer</h5>
+          <div class="col-md-5 float-right mb-2 px-5">
+            <a
+              href="./addCustomer.html "
+              class="btn btn-primary btn-sm"
+              style="font-size: 12px"
+            >
+              <i class="fas fa-user"></i> Tambah Customer Baru
+            </a>
+          </div>
+          <table class="table table-striped table-sm custom-table mt-3">
+            <thead class="bg-baru text-white">
+              <tr class="text-center">
+                <th scope="col">No</th>
+                <th scope="col">Id Customer</th>
+                <th scope="col">Nama</th>
+                <th scope="col">Alamat</th>
+                <th scope="col">No HP</th>
+                <th scope="col">Tanggal Lahir</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+
+            <tbody class="text-center">
+              <!-- Isi tabel disini, jika ada -->
+              <tr style="background-color: #edf2f7">
+                <td>1</td>
+                <td>
+                  <a href="" class="text-danger" style="text-decoration: none"
+                    >C01245567</a
+                  >
+                </td>
+                <td>Nauval Alfarisi</td>
+                <td>Jl. Tenggilis Mulya no.9B</td>
+                <td>085173245264</td>
+                <td>19/07/2001</td>
+                <td>
+                  <div class="d-flex justify-content-center">
+                    <a
+                      href="./editCustomer.html"
+                      class="btn btn-outline-warning btn-sm mr-1"
+                    >
+                      <i class="fa fa-edit" aria-hidden="true"></i>
+                      Edit
+                    </a>
+                    <a href="" class="btn btn-outline-danger btn-sm">
+                      <i class="fa fa-trash" aria-hidden="true"></i>
+                      Delete
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              <tr class="bg-light">
+                <td>2</td>
+                <td>
+                  <a href="" class="text-danger" style="text-decoration: none"
+                    >C01245567</a
+                  >
+                </td>
+                <td>Nauval Alfarisi</td>
+                <td>Jl. Tenggilis Mulya no.9B</td>
+                <td>085173245264</td>
+                <td>19/07/2001</td>
+                <td>
+                  <div class="d-flex justify-content-center">
+                    <a
+                      href="./editCustomer.html "
+                      class="btn btn-outline-warning btn-sm mr-1"
+                    >
+                      <i class="fa fa-edit" aria-hidden="true"></i>
+                      Edit
+                    </a>
+                    <a href="" class="btn btn-outline-danger btn-sm">
+                      <i class="fa fa-trash" aria-hidden="true"></i>
+                      Delete
+                    </a>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <br /><br />
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+    <script src="../../../resources/js/jquery.js"></script>
+    <script src="../../../resources/js/bootstrap.min.js"></script>
+    <script src="../../../resources/js/izin.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has("form_saved")) {
+          swal({
+            title: "Form Saved",
+            text: "Your form has been successfully saved!",
+            icon: "success",
+            button: "OK",
+          });
+        }
+      });
+      document
+        .querySelector(".btn-outline-danger")
+        .addEventListener("click", function (event) {
+          event.preventDefault(); // Mencegah tindakan default tombol
+          swal({
+            title: "Hapus Customer?",
+            text: "Apakah Anda yakin ingin menghapus customer ini?",
+            icon: "warning",
+            buttons: ["Tidak", "Ya"],
+            dangerMode: true,
+          }).then((willDelete) => {
+            if (willDelete) {
+              swal("Customer telah dihapus!", {
+                icon: "success",
+              }).then(() => {
+                window.location.href = "./listCustomer.html";
+              });
+            } else {
+              swal("Customer tidak jadi dihapus");
+            }
+          });
+        });
+    </script>
+    <script>
+      // JavaScript to toggle sidebar visibility
+      $(document).ready(function () {
+        $(".navbar-toggler").click(function () {
+          $("#wrapper").toggleClass("toggled");
+        });
+      });
+    </script>
+  </body>
+</html>

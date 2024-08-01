@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Pengajuan Izin Sakit</title>
+    <link href="../../../../resources/css/bootstrap.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link href="../../../../resources/css/tes.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+     <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.css"
+  />
+    <link
+      rel="icon"
+      href="../../../../resources/images/asw.png"
+      type="image/icon type"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="../../index.html">
+        <img
+          src="../../../../resources/images/asri.png"
+          width="30%"
+          class="d-inline-block align-top"
+          alt="Logo"
+        />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <div class="d-flex align-items-center">
+                <img
+                  src="../../../../resources/images/orang3.jpg"
+                  class="rounded-circle"
+                  alt="User Image"
+                />
+                <div class="user-info ml-2 dropdown-toggle">
+                  <span class="user-name">Kim Minji</span><br />
+                  <span class="user-nik">IT</span>
+                </div>
+              </div>
+            </a>
+            <div
+              class="dropdown-menu dropdown-menu-right bg-light"
+              aria-labelledby="navbarDropdownMenuLink"
+            >
+              <a class="dropdown-item" href="../../Profile/profile.html"
+                ><i class="fas fa-user-cog"></i> Pengaturan Profile</a
+              >
+              <a class="dropdown-item text-danger" href="../../login.html"
+                ><i class="fas fa-arrow-left"></i> Log Out</a
+              >
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="d-flex" id="wrapper">
+      <!-- Sidebar -->
+      <div class="bg-light border-right" id="sidebar-wrapper">
+        <div
+          class="list-group list-group-flush mt-2"
+          style="border-radius: 10px"
+        >
+          <a
+            href="../employeeForm.html"
+            class="list-group-item list-group-item-action  mb-2"
+            style="border-radius: 10px"
+          >
+            <i class="fas fa-home"></i> Beranda
+          </a>
+          <a
+            href="izin.html"
+            class="list-group-item list-group-item-action mb-2 new-active"
+            style="border-radius: 10px"
+          >
+            <i class="fas fa-envelope"></i> Izin
+          </a>
+          <a
+            href="../cuti/cuti.html"
+            class="list-group-item list-group-item-action mb-2"
+            style="border-radius: 10px"
+          >
+            <i class="fas fa-envelope"></i> Cuti
+          </a>
+        </div>
+      </div>
+
+      <!-- Page Content -->
+      <div id="page-content-wrapper">
+        <div class="container mt-5">
+          <div class="text-dark">
+            <div class="p-5 rounded-3 border col-xl-6 form-izin">
+              <div class="mb-3 text-center">
+                <h1 class="text-danger" style="font-weight: bold;">Form Pengajuan Izin Sakit</h1>
+              </div>
+              <div class="col-md-6 mb-3 mx-auto">
+            <!-- mx-auto added for centering -->
+            <select
+              name="jenisIzin"
+              id="jenisIzin"
+              class="form-control"
+              onchange="redirectToSelectedPage()"
+            >
+              <option value="izinSakit.html">Izin Sakit</option>
+              <option value="izinTerlambat.html">Izin Terlambat</option>
+              <option value="izinPulangawal.html">Izin Pulang Awal</option>
+              <option value="izinNoClockIn.html">Izin No Clock In</option>
+              <option value="izinNoClockOut.html">Izin No Clock Out</option>
+              <option value="izinLembur.html">Izin Lembur</option>
+            </select>
+          </div>
+              <hr />
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="who" class="form-label">Nama</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="who"
+                    id="who"
+                    placeholder="Kim Minji"
+                    readonly
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="nik" class="form-label">NIK</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="nik"
+                    id="nik"
+                    placeholder="153-1"
+                    readonly
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="tanggal_pengajuan" class="form-label"
+                    >Tanggal Pengajuan</label
+                  >
+                  <input
+                    class="form-control"
+                    type="date"
+                    name="tanggal_pengajuan"
+                    id="tanggal_pengajuan"
+                    readonly
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="tgl_awal" class="form-label"
+                    >Tanggal Awal Sakit</label
+                  >
+                  <input
+                    class="form-control custom-placeholder"
+                    type="date"
+                    name="tgl_awal"
+                    id="tgl_awal"
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="tgl_akhir" class="form-label"
+                    >Tanggal Akhir Sakit</label
+                  >
+                  <input
+                    class="form-control custom-placeholder"
+                    type="date"
+                    name="tgl_akhir"
+                    id="tgl_akhir"
+                  />
+                  <div id="tgl_akhir_error" class="text-danger"></div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="jumlah" class="form-label">Jumlah sakit</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="jumlah"
+                    id="jumlah"
+                    readonly
+                  />
+                </div>
+                <div class="col-md-12 mb-3">
+                  <label for="keterangan" class="form-label"
+                    >Keterangan/Diagnosa</label
+                  >
+                  <textarea
+                    class="form-control"
+                    type="text"
+                    name="keterangan"
+                    id="keterangan"
+                    style="height: 100px"
+                  ></textarea>
+                </div>
+              </div>
+              <div class="mt-2">
+                    <label for="surat_dokter">Upload Surat Dokter</label>
+                    <label for="upload-file" class="btn btn-primary btn-sm">
+                      <i class="fas fa-upload"></i> Pilih File
+                    </label>
+                    <input
+                      type="file"
+                      id="upload-file"
+                      name="upload-file"
+                      style="display: none"
+                      name="surat_dokter"
+                        accept=".jpg, .pdf, .png"
+                        onchange="validateFile(this)"
+                        required
+                    />
+                    <div class="text-danger mt-2" id="file_error_message"></div>
+                    <small class="text-muted">Hanya file dengan format .jpg, .pdf, atau .png yang diperbolehkan.</small>
+               </div>
+              <hr />
+              <div class="row">
+                <div class="col-md-6 col-6 text-center">
+                  <a
+                    href="../employeeForm.html"
+                    class="btn btn-outline-danger btn-lg mt-3"
+                  >
+                    <i class="fa fa-arrow-left me-2"></i> Cancel
+                  </a>
+                </div>
+                <div class="col-md-6 col-6 text-center">
+                  <a href="../employeeForm.html" class="btn btn-success btn-lg mt-3">
+                    <i class="fa fa-check me-2"></i> Save
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+    <script src="../../../../resources/js/jquery.js"></script>
+    <script src="../../../../resources/js/popper.min.js"></script>
+    <script src="../../../../resources/js/bootstrap.min.js"></script>
+    <script src="../../../../resources/js/izin.js"></script>
+    <script src="../../../../resources/js/sakit.js"></script>
+    <script>
+      document.querySelector('.btn-success').addEventListener('click', function(event) {
+        event.preventDefault(); // Mencegah tindakan default tombol
+        swal({
+          title: "Pengajuan Izin Sakit Berhasil!",
+          text: "Pengajuan Izin Berhasil ditambahkan!",
+          icon: "success",
+          button: "OK"
+        }).then(() => {
+          window.location.href = "../employeeForm.html";
+        });
+      });
+    </script>
+    <script>
+      // JavaScript to toggle sidebar visibility
+      $(document).ready(function () {
+        $(".navbar-toggler").click(function () {
+          $("#wrapper").toggleClass("toggled");
+        });
+      });
+    </script>
+  </body>
+</html>

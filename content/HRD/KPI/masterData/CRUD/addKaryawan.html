@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tambah Data Karyawan</title>
+    <link rel="stylesheet" href="../../../../../resources/css/bootstrap.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link href="../../../../../resources/css/tes.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.css"
+    />
+    <link
+      rel="icon"
+      href="../../../../../resources/images/asw.png"
+      type="image/icon type"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="../../../index.html">
+        <img
+          src="../../../../../resources/images/asri.png"
+          width="30%"
+          class="d-inline-block align-top"
+          alt="Logo"
+        />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <div class="d-flex align-items-center">
+                <img
+                  src="../../../../../resources/images/orang3.jpg"
+                  class="rounded-circle"
+                  alt="User Image"
+                />
+                <div class="user-info ml-2 dropdown-toggle">
+                  <span class="user-name">Kim Minji</span><br />
+                  <span class="user-nik">HRD</span>
+                </div>
+                <!-- <i class="fas fa-chevron-down ml-2"></i> -->
+                <!-- Icon panah ke bawah -->
+              </div>
+            </a>
+            <div
+              class="dropdown-menu dropdown-menu-right bg-light"
+              aria-labelledby="navbarDropdownMenuLink"
+            >
+              <a class="dropdown-item" href="../../../Profile/profile.html"
+                ><i class="fas fa-user-cog"></i> Pengaturan Profile</a
+              >
+              <a class="dropdown-item text-danger" href="../../../login.html"
+                ><i class="fas fa-arrow-left"></i> Log Out</a
+              >
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="d-flex" id="wrapper">
+      <!-- Sidebar -->
+      <div class="bg-light border-right" id="sidebar-wrapper">
+        <div
+          class="list-group list-group-flush mt-2"
+          style="border-radius: 10px"
+        >
+          <a
+            href="../../kpi.html"
+            class="list-group-item list-group-item-action mb-2"
+            style="border-radius: 10px"
+          >
+            <i class="fas fa-home"></i> Beranda
+          </a>
+          <a
+            href="#"
+            class="list-group-item list-group-item-action mb-2 toggle-submenu"
+            style="border-radius: 10px"
+          >
+            <i class="fas fa-clipboard-list"></i> Laporan KPI
+            <i class="fas fa-chevron-down ml-auto float-right py-1"></i>
+          </a>
+          <div id="laporan-submenu" class="submenu">
+            <a
+              class="dropdown-item list-group-item list-group-item-action mb-2 new-item"
+              href="../../laporan/semester.html"
+              style="border-radius: 10px"
+            >
+              <i class="fas fa-clipboard-list"></i> Laporan KPI Semester
+            </a>
+            <a
+              class="dropdown-item list-group-item list-group-item-action mb-2 new-item"
+              href="../../laporan/tahunan.html"
+              style="border-radius: 10px"
+            >
+              <i class="fas fa-clipboard-list"></i> Laporan KPI Tahunan
+            </a>
+          </div>
+          <a
+            href="#"
+            class="list-group-item list-group-item-action mb-2 new-active toggle-submenu-data"
+            style="border-radius: 10px"
+          >
+            <i class="fas fa-cog"></i> Master Data
+            <i class="fas fa-chevron-down ml-auto float-right py-1"></i>
+          </a>
+          <div id="master-submenu" class="submenu">
+            <a
+              class="dropdown-item list-group-item list-group-item-action new-active text-light mb-2 new-item"
+              href="../../masterData/karyawan.html"
+              style="border-radius: 10px"
+            >
+              <i class="fas fa-cog"></i> Data Karyawan
+            </a>
+            <a
+              class="dropdown-item list-group-item list-group-item-action mb-2 new-item"
+              href="../../masterData/cabang.html"
+              style="border-radius: 10px"
+            >
+              <i class="fas fa-cog"></i> Data Cabang
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Page Content -->
+      <div id="page-content-wrapper">
+        <div class="container mt-5">
+          <div class="text-dark">
+            <div class="p-5 rounded-3 border col-xl-6 form-izin">
+              <div class="mb-3 text-center">
+                <h1 class="text-danger" style="font-weight: bold">
+                  Tambah Karyawan
+                </h1>
+              </div>
+              <hr />
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="who" class="form-label">Nama</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="who"
+                    id="who"
+                    placeholder="Masukkan Nama"
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="nik" class="form-label">NIK</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="nik"
+                    id="nik"
+                    placeholder="Masukkan NIK"
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="username" class="form-label">Username</label>
+                  <input
+                    class="form-control custom-placeholder"
+                    type="text"
+                    name="username"
+                    id="username"
+                    placeholder="username"
+                    readonly
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input
+                    class="form-control custom-placeholder"
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Masukkan Email"
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="password" class="form-label">Password</label>
+                  <div class="input-group">
+                    <input
+                      class="form-control custom-placeholder"
+                      type="password"
+                      name="password"
+                      id="password"
+                      placeholder="Masukkan password"
+                    />
+                    <button
+                      class="btn btn-outline-secondary"
+                      type="button"
+                      id="password-toggle-btn"
+                    >
+                      <i class="fa fa-eye" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                  <label for="cabang" class="form-label">Cabang</label>
+                  <select name="cabang" id="cabang" class="form-control">
+                    <option value="">Pilih Cabang</option>
+                    <option>Pucang</option>
+                    <option>Ho</option>
+                    <option value="">Jenggolo</option>
+                  </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="departement" class="form-label"
+                    >Departement</label
+                  >
+                  <select
+                    name="departement"
+                    id="departement"
+                    class="form-control"
+                  >
+                    <option value="">Pilih Departement</option>
+                    <option>MANAGEMENT</option>
+                    <option>HRD dan GAL</option>
+                    <option>SERVICE</option>
+                    <option>INFORMATION SYSTEM AND TECHNOLOGY</option>
+                    <option>CUSTOMER FIRST DEALER</option>
+                    <option>MARKETING</option>
+                    <option>ADMIN DAN UMUM</option>
+                    <option>VARIASI</option>
+                    <option value="">F AND B SERVICE</option>
+                  </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="jabatan" class="form-label">Jabatan</label>
+                  <select name="jabatan" id="jabatan" class="form-control">
+                    <option value="">Pilih Penilai</option>
+                    <option>IT</option>
+                    <option value="">Marketing</option>
+                  </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="penilai2" class="form-label">Penilai 2</label>
+                  <select name="penilai2" id="penilai2" class="form-control">
+                    <option value="">Pilih Penilai</option>
+                    <option>Nauval Alfarisi</option>
+                    <option>Alicia Natalyn</option>
+                  </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="penilai3" class="form-label">Penilai 3</label>
+                  <select name="penilai3" id="penilai3" class="form-control">
+                    <option value="">Pilih Penilai</option>
+                    <option>Nauval Alfarisi</option>
+                    <option>Alicia Natalyn</option>
+                  </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="penilai4" class="form-label">Penilai 4</label>
+                  <select name="penilai4" id="penilai4" class="form-control">
+                    <option value="">Pilih Penilai</option>
+                    <option>Nauval Alfarisi</option>
+                    <option>Alicia Natalyn</option>
+                  </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="Hak" class="form-label">Hak</label>
+                  <select name="Hak" id="Hak" class="form-control">
+                    <option value="">Pilih Hak</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                  </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="golongan" class="form-label">Golongan</label>
+                  <select name="golongan" id="golongan" class="form-control">
+                    <option>Pilih Golongan</option>
+                    <option>I A</option>
+                    <option>I B</option>
+                    <option>I C</option>
+                    <option>I D</option>
+                    <option>I E</option>
+                    <option>I F</option>
+                    <option>II A</option>
+                    <option>II B</option>
+                    <option>II C</option>
+                    <option>II D</option>
+                    <option>II E</option>
+                    <option>II F</option>
+                    <option>III A</option>
+                    <option>III B</option>
+                    <option>III C</option>
+                    <option>III D</option>
+                    <option>III E</option>
+                    <option>III F</option>
+                    <option>IV A</option>
+                    <option>IV B</option>
+                    <option>IV C</option>
+                    <option>IV D</option>
+                    <option>IV E</option>
+                    <option>IV F</option>
+                    <option>V</option>
+                  </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="tgl_masuk" class="form-label"
+                    >Tanggal Masuk</label
+                  >
+                  <input
+                    class="form-control custom-placeholder"
+                    type="date"
+                    name="tgl_masuk"
+                    id="tgl_masuk"
+                  />
+                </div>
+              </div>
+
+              <hr />
+              <div class="row">
+                <div class="col-md-6 col-6 text-center">
+                  <a
+                    href="../karyawan.html"
+                    class="btn btn-outline-danger btn-lg mt-3"
+                  >
+                    <i class="fa fa-arrow-left me-2"></i> Cancel
+                  </a>
+                </div>
+                <div class="col-md-6 col-6 text-center">
+                  <a
+                    href="../karyawan.html"
+                    class="btn btn-success btn-lg mt-3"
+                  >
+                    <i class="fa fa-check me-2"></i> Save
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+    <script src="../../../../../resources/js/jquery.js"></script>
+    <script src="../../../../../resources/js/bootstrap.min.js"></script>
+    <script src="../../../../../resources/js/laporanKPI.js"></script>
+    <script src="../../../../../resources/js/masterData.js"></script>
+    <script>
+      document
+        .querySelector(".btn-success")
+        .addEventListener("click", function (event) {
+          event.preventDefault(); // Mencegah tindakan default tombol
+          swal({
+            title: "Penambahan Berhasil!",
+            text: "Karyawan Baru berhasil ditambahkan!",
+            icon: "success",
+            button: "OK",
+          }).then(() => {
+            window.location.href = "../karyawan.html";
+          });
+        });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var passwordField = document.getElementById("password");
+        var passwordToggleBtn = document.getElementById("password-toggle-btn");
+
+        passwordToggleBtn.addEventListener("click", function () {
+          if (passwordField.type === "password") {
+            passwordField.type = "text";
+            passwordToggleBtn.innerHTML =
+              '<i class="fa fa-eye-slash" aria-hidden="true"></i>';
+          } else {
+            passwordField.type = "password";
+            passwordToggleBtn.innerHTML =
+              '<i class="fa fa-eye" aria-hidden="true"></i>';
+          }
+        });
+      });
+    </script>
+    <script>
+      // Add an event listener to the NIK input field
+      document.getElementById("nik").addEventListener("input", function () {
+        // Get the value from the NIK input
+        var nikValue = this.value;
+
+        // Update the value of the Username input with the NIK value
+        document.getElementById("username").value = nikValue;
+      });
+    </script>
+    <script>
+      // JavaScript to toggle sidebar visibility
+      $(document).ready(function () {
+        $(".navbar-toggler").click(function () {
+          $("#wrapper").toggleClass("toggled");
+        });
+      });
+    </script>
+  </body>
+</html>

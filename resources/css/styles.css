@@ -1,0 +1,156 @@
+body {
+  overflow-x: hidden;
+  background-color: #f4f4f4;
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  box-shadow: 5px 5px 5px 0px rgba(21, 21, 42, 0.1); /* Bayangan */
+}
+#sidebar-wrapper {
+  width: 250px;
+  margin-left: -250px;
+  transition: margin 0.25s ease-out;
+  box-shadow: 5px 5px 5px 0px rgba(21, 21, 42, 0.1); /* Bayangan */
+  padding-bottom: 21%;
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {
+  width: 15rem;
+  height: 100%;
+}
+.new-active {
+  background-color: #c7202e;
+  color: #fff;
+}
+.new-active:hover {
+  background-color: #c7202e;
+}
+.list-group-item:hover {
+  background-color: #c7202e;
+  color: #fff;
+}
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+}
+
+.card {
+  margin-bottom: 20px;
+  height: 200px; /* Tinggi kartu */
+  border-radius: 5px; /* Sudut bulatan */
+  box-shadow: 5px 5px 5px 0px rgba(21, 21, 42, 0.1); /* Bayangan */
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  background-color: #ff414d;
+  color: #fff;
+}
+
+.card img {
+  max-width: 30%; /* Lebar maksimum gambar */
+  height: auto;
+}
+
+.card a {
+  text-decoration: none;
+  color: #000;
+}
+
+.card a:hover {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 100%; /* Adjust to 100% width on small screens */
+    height: auto; /* Auto height for responsiveness */
+  }
+
+  .card img {
+    width: 50%; /* Adjusted image width for small screens */
+  }
+}
+
+.custom-card {
+  width: 100%;
+  border-radius: 30px;
+  padding: 15px; /* Adjusted padding */
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  height: auto; /* Adjusted height to fit content */
+  transition: transform 0.3s;
+  background-color: #4846b4;
+  margin-top: 105px;
+}
+
+.custom-card .custom-card-content {
+  padding: 10px;
+}
+
+.custom-card .custom-card-title {
+  font-size: 20px;
+  margin-top: 10px;
+  color: #ffffff;
+}
+.card-title {
+  font-weight: bold;
+}
+.custom-card-title {
+  color: #c7202e;
+}
+
+.custom-card ol {
+  font-size: 16px;
+}
+
+.custom-card li {
+  margin-bottom: 10px;
+}
+
+.custom-card .teks {
+  color: #ffffff;
+}
+
+.nav-link img.rounded-circle {
+  width: 50px; /* Sesuaikan ukuran gambar sesuai kebutuhan */
+  height: 50px; /* Sesuaikan ukuran gambar sesuai kebutuhan */
+  border-radius: 50%; /* Mengatur sudut gambar menjadi lingkaran */
+  background-color: #000;
+}
+.nav-link .user-info {
+  font-size: 14px; /* Ukuran font untuk nama dan NIK */
+}
+
+.nav-link .user-name {
+  color: #e82a39;
+  font-weight: bolder; /* Membuat nama pengguna tebal */
+}
+
+.nav-link .user-name:hover {
+  color: #c7202e;
+  font-weight: bolder; /* Membuat nama pengguna tebal */
+}
+.nav-link .user-nik {
+  color: #888; /* Warna NIK untuk penampilan yang lebih ringan */
+}
+
+.nav-link .fa-chevron-down {
+  font-size: 12px; /* Ukuran font ikon panah */
+}

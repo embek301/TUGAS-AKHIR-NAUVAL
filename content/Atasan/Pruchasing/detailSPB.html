@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Pengajuan Peminjaman Unit</title>
+    <link href="../../../resources/css/bootstrap.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link href="../../../resources/css/tes.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+     <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.css"
+  />
+    <link
+      rel="icon"
+      href="../../../resources/images/asw.png"
+      type="image/icon type"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="../index.html">
+        <img
+          src="../../../resources/images/asri.png"
+          width="30%"
+          class="d-inline-block align-top"
+          alt="Logo"
+        />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <div class="d-flex align-items-center">
+                <img
+                  src="../../../resources/images/orang3.jpg"
+                  class="rounded-circle"
+                  alt="User Image"
+                />
+                <div class="user-info ml-2 dropdown-toggle">
+                  <span class="user-name">Kim Minji</span><br />
+                  <span class="user-nik">Head of IT</span>
+                </div>
+              </div>
+            </a>
+            <div
+              class="dropdown-menu dropdown-menu-right bg-light"
+              aria-labelledby="navbarDropdownMenuLink"
+            >
+              <a class="dropdown-item" href="../Profile/profile.html"
+                ><i class="fas fa-user-cog"></i> Pengaturan Profile</a
+              >
+              <a class="dropdown-item text-danger" href="../login.html"
+                ><i class="fas fa-arrow-left"></i> Log Out</a
+              >
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="d-flex" id="wrapper">
+      <!-- Sidebar -->
+      <div class="bg-light border-right" id="sidebar-wrapper">
+        <div
+          class="list-group list-group-flush mt-2"
+          style="border-radius: 10px"
+        >
+          <a
+            href="./Purchasing.html"
+            class="list-group-item list-group-item-action new-active mb-2"
+            style="border-radius: 10px"
+          >
+            <i class="fas fa-home"></i> Beranda
+          </a>
+          <a
+            href="./dataLaporan.html"
+            class="list-group-item list-group-item-action mb-2"
+            style="border-radius: 10px"
+          >
+            <i class="fas fa-clipboard-list"></i> Data Laporan
+          </a>
+        </div>
+      </div>
+
+      <!-- Page Content -->
+      <div id="page-content-wrapper">
+        <div class="container mt-5">
+          <div class="text-dark">
+            <div class="p-5 rounded-3 border col-xl-6 form-izin">
+              <div class="mb-2">
+                <a
+                  href="./Purchasing.html"
+                  class="btn btn-outline-danger btn-lg mt-3">
+                  <i class="fa fa-arrow-left me-2"></i>
+                  </a>
+              </div>
+              <div class="mb-3 text-center">
+                <h1 class="text-danger" style="font-weight: bold;">Detail Surat Permintaan Barang</h1>
+              </div>
+              <div class="col-md-6 mb-3 mx-auto">
+            <!-- mx-auto added for centering -->
+          </div>
+              <hr />
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="who" class="form-label">Nama</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="who"
+                    id="who"
+                    placeholder="Kim Minji"
+                    readonly
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="nik" class="form-label">NIK</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="nik"
+                    id="nik"
+                    placeholder="153-1"
+                    readonly
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="tanggal_pengajuan" class="form-label"
+                    >Tanggal Pengajuan</label
+                  >
+                  <input
+                    class="form-control"
+                    type="date"
+                    name="tanggal_pengajuan"
+                    id="tanggal_pengajuan"
+                    readonly
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="waktu" class="form-label"
+                    >Waktu Pengajuan</label
+                  >
+                  <input
+                    class="form-control custom-placeholder"
+                    type="time"
+                    name="waktu"
+                    id="waktu"
+                    readonly
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="jenis_SPB" class="form-label">Jenis SPB</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="jenis_SPB"
+                    id="jenis_SPB"
+                    placeholder="IT"
+                    readonly
+                  />
+                </div>
+                 <div class="col-md-12 mb-3">
+                  <label for="Alasan" class="form-label"
+                    >Keterangan</label
+                  >
+                  <textarea
+                    class="form-control"
+                    type="text"
+                    name="Keterangan"
+                    id="Keterangan"
+                    style="height: 100px"
+                    placeholder="Beli Monitor"
+                    readonly
+                  ></textarea>
+                </div>
+                <div class="col-md-12 mb-3">
+                  <label for="Catatan" class="form-label"
+                    >Catatan</label
+                  >
+                  <textarea
+                    class="form-control"
+                    type="text"
+                    name="Catatan"
+                    id="Catatan"
+                    style="height: 100px"
+                    readonly
+                  ></textarea>
+                </div>
+                <div class="col-md-12 mb-2">
+                    <label for="surat_dokter">File: <a href="" class="text-danger" style="text-decoration: none;">Lihat File</a></label>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="approval1" class="form-label">Status Persetujuan Kadep</label>
+                  <input
+                    class="form-control bg-success text-white"
+                    type="text"
+                    name="approval1"
+                    id="approval1"
+                    value="Diterima"
+                    readonly
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="approval1" class="form-label">Status Persetujuan ADH</label>
+                  <input
+                    class="form-control bg-success text-white"
+                    type="text"
+                    name="approval1"
+                    id="approval1"
+                    value="Diterima"
+                    readonly
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="approval1" class="form-label">Status Persetujuan KaCab</label>
+                  <input
+                    class="form-control bg-success text-white"
+                    type="text"
+                    name="approval1"
+                    id="approval1"
+                    value="Diterima"
+                    readonly
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="approval1" class="form-label">Status Persetujuan Head IT</label>
+                  <input
+                    class="form-control bg-success text-white"
+                    type="text"
+                    name="approval1"
+                    id="approval1"
+                    value="Diterima"
+                    readonly
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+    <script src="../../../resources/js/jquery.js"></script>
+    <script src="../../../resources/js/popper.min.js"></script>
+    <script src="../../../resources/js/bootstrap.min.js"></script>
+    <script src="../../../resources/js/izin.js"></script>
+    <script>
+      document.querySelector('.btn-success').addEventListener('click', function(event) {
+        event.preventDefault(); // Mencegah tindakan default tombol
+        swal({
+          title: "Pengajuan SPB Berhasil!",
+          text: "Pengajuan SPB ditambahkan!",
+          icon: "success",
+          button: "OK"
+        }).then(() => {
+          window.location.href = "./Purchasing.html";
+        });
+      });
+    </script>
+    <script>
+      // JavaScript to toggle sidebar visibility
+      $(document).ready(function () {
+        $(".navbar-toggler").click(function () {
+          $("#wrapper").toggleClass("toggled");
+        });
+      });
+    </script>
+  </body>
+</html>

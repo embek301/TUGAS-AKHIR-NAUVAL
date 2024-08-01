@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asri Motor Single Window</title>
+    <link href="../../resources/css/bootstrap.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link href="../../resources/css/styles.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="../../resources/images/asw.png"
+      type="image/icon type"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="index.html">
+        <img
+          src="../../resources/images/asri.png"
+          width="30%"
+          class="d-inline-block align-top"
+          alt="Logo"
+        />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <div class="d-flex align-items-center">
+                <img
+                  src="../../resources/images/orang3.jpg"
+                  class="rounded-circle"
+                  alt="User Image"
+                />
+                <div class="user-info ml-2 dropdown-toggle">
+                  <span class="user-name">Kim Minji</span><br />
+                  <span class="user-nik">IT</span>
+                </div>
+              </div>
+            </a>
+            <div
+              class="dropdown-menu dropdown-menu-right bg-light"
+              aria-labelledby="navbarDropdownMenuLink"
+            >
+              <a class="dropdown-item" href="./Profile/profile.html"
+                ><i class="fas fa-user-cog"></i> Pengaturan Profile</a
+              >
+              <a class="dropdown-item text-danger" href="login.html"
+                ><i class="fas fa-arrow-left"></i> Log Out</a
+              >
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="d-flex" id="wrapper">
+      <!-- Sidebar -->
+      <div class="bg-light border-right" id="sidebar-wrapper">
+        <div
+          class="list-group list-group-flush mt-2"
+          style="border-radius: 10px"
+        >
+          <a
+            href="index.html"
+            class="list-group-item list-group-item-action new-active"
+            ><i class="fas fa-home"></i> Home</a
+          >
+        </div>
+      </div>
+
+      <!-- Page Content -->
+      <div id="page-content-wrapper">
+        <div class="container mt-5 container-fluid">
+          <div class="row">
+            <div class="col-md-3 mb-4">
+              <div class="card text-center">
+                <a href="./Employeeform/employeeForm.html" class="mt-4">
+                  <img
+                    src="../../resources/images/employeeForm.png"
+                    class="card-img-top card-img-small mx-auto mt-3"
+                    alt="Employee Form"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Employee Form</h5>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-3 mb-4">
+              <div class="card text-center">
+                <a href="../Karyawan/TestDrive/TestDrive.html" class="mt-4">
+                  <img
+                    src="../../resources/images/TestDrive.png"
+                    class="card-img-top card-img-small mx-auto mt-3"
+                    alt="Test Drive"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Test Drive</h5>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-3 mb-4">
+              <div class="card text-center">
+                <a href="./Pruchasing/Purchasing.html" class="mt-4">
+                  <img
+                    src="../../resources/images/purchasing.png"
+                    class="card-img-top card-img-small mx-auto mt-3"
+                    alt="Purchasing"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Purchasing</h5>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3 mb-4">
+              <div class="card text-center">
+                <a href="./CustomerCard/customerCard.html" class="mt-4">
+                  <img
+                    src="../../resources/images/CustomerCard.png"
+                    class="card-img-top card-img-small mx-auto mt-3"
+                    alt="Customer Card"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Customer Card</h5>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-3 mb-4">
+              <div class="card text-center">
+                <a href="./HelpDesk/HelpDesk.html" class="mt-4">
+                  <img
+                    src="../../resources/images/helpdesk.png"
+                    class="card-img-top card-img-small mx-auto mt-3"
+                    alt="Help Desk"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Help Desk</h5>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../resources/js/jquery.js"></script>
+    <script src="../../resources/js/popper.min.js"></script>
+    <script src="../../resources/js/bootstrap.min.js"></script>
+    <script>
+      // JavaScript to toggle sidebar visibility
+      $(document).ready(function () {
+        $(".navbar-toggler").click(function () {
+          $("#wrapper").toggleClass("toggled");
+        });
+      });
+    </script>
+  </body>
+</html>

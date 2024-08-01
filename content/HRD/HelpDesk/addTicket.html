@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Ticket</title>
+    <link href="../../../resources/css/bootstrap.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link href="../../../resources/css/tes.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+     <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.css"
+  />
+    <link
+      rel="icon"
+      href="../../../resources/images/asw.png"
+      type="image/icon type"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="../index.html">
+        <img
+          src="../../../resources/images/asri.png"
+          width="30%"
+          class="d-inline-block align-top"
+          alt="Logo"
+        />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <div class="d-flex align-items-center">
+                <img
+                  src="../../../resources/images/orang3.jpg"
+                  class="rounded-circle"
+                  alt="User Image"
+                />
+                <div class="user-info ml-2 dropdown-toggle">
+                  <span class="user-name">Kim Minji</span><br />
+                  <span class="user-nik">IT</span>
+                </div>
+              </div>
+            </a>
+            <div
+              class="dropdown-menu dropdown-menu-right bg-light"
+              aria-labelledby="navbarDropdownMenuLink"
+            >
+              <a class="dropdown-item" href="../Profile/profile.html"
+                ><i class="fas fa-user-cog"></i> Pengaturan Profile</a
+              >
+              <a class="dropdown-item text-danger" href="../login.html"
+                ><i class="fas fa-arrow-left"></i> Log Out</a
+              >
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="d-flex" id="wrapper">
+      <!-- Sidebar -->
+      <div class="bg-light border-right" id="sidebar-wrapper">
+        <div
+          class="list-group list-group-flush mt-2"
+          style="border-radius: 10px"
+        >
+          <a
+            href="./HelpDesk.html"
+            class="list-group-item list-group-item-action new-active mb-2"
+            style="border-radius: 10px"
+          >
+            <i class="fas fa-home"></i> Beranda
+          </a>
+          <a
+            href="./dataLaporan.html"
+            class="list-group-item list-group-item-action mb-2"
+            style="border-radius: 10px"
+          >
+           <i class="fas fa-clipboard-list"></i> Data Ticket
+          </a>
+        </div>
+      </div>
+
+      <!-- Page Content -->
+      <div id="page-content-wrapper">
+        <div class="container mt-5">
+          <div class="text-dark">
+            <div class="p-5 rounded-3 border col-xl-6 form-izin">
+              <div class="mb-3 text-center">
+                <h1 class="text-danger" style="font-weight: bold;">New Ticket</h1>
+              </div>
+              <hr />
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="who" class="form-label">Nama Pengaju</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="who"
+                    id="who"
+                    placeholder="Kim Minji"
+                    readonly
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="nik" class="form-label">NIK</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="nik"
+                    id="nik"
+                    placeholder="153-1"
+                    readonly
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="tanggal_pengajuan" class="form-label"
+                    >Tanggal Pengajuan</label
+                  >
+                  <input
+                    class="form-control"
+                    type="date"
+                    name="tanggal_pengajuan"
+                    id="tanggal_pengajuan"
+                    value="2024-07-13"
+                    readonly
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="Pengajuan" class="form-label"
+                    >Waktu Pengajuan</label
+                  >
+                  <input
+                    class="form-control custom-placeholder"
+                    type="time"
+                    name="Pengajuan"
+                    id="Pengajuan"
+                    value="15:30"
+                    readonly
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="Priority" class="form-label">Priority</label>
+                  <select
+                    name="Priority"
+                    id="Priority"
+                    class="form-control"
+                    >
+                    <option >1 - Lowest</option>
+                    <option >2 - Low</option>
+                    <option >3 - Medium</option>
+                    <option >4 - High</option>
+                    <option >5 - Highest</option>
+                    </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="Assigned" class="form-label">Assigned To</label>
+                  <select
+                    name="Assigned"
+                    id="Assigned"
+                    class="form-control"
+                    >
+                    <option >Alex</option>
+                    <option >Nauval</option>
+                    <option >Syadni</option>
+                    <option >Alicia</option>
+                    <option >Hafizh</option>
+                    </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="area" class="form-label">Area</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="area"
+                    id="area"
+                    value="ASM01"
+                    readonly
+                  />
+                </div>
+                <div class="col-md-12 mb-3">
+                  <label for="Incident" class="form-label"
+                    >Incident</label
+                  >
+                  <textarea
+                    class="form-control"
+                    type="text"
+                    name="Incident"
+                    id="Incident"
+                    style="height: 100px"
+                    
+                  ></textarea>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label for="surat_dokter">Upload File</label>
+                    <label for="upload-file" class="btn btn-primary btn-sm">
+                      <i class="fas fa-upload"></i> Pilih File
+                    </label>
+                    <input
+                      type="file"
+                      id="upload-file"
+                      name="upload-file"
+                      style="display: none"
+                      name="surat_dokter"
+                        accept=".jpg, .pdf, .png"
+                        onchange="validateFile(this)"
+                        required
+                    />
+                    <div class="text-danger mt-2" id="file_error_message"></div>
+                    <small class="text-muted">Hanya file dengan format .jpg, .pdf, atau .png yang diperbolehkan.</small>
+               </div>
+                
+              </div>
+              <hr />
+              <div class="row">
+                <div class="col-md-6 col-6 text-center">
+                  <a
+                    href="./HelpDesk.html"
+                    class="btn btn-outline-danger btn-lg mt-3"
+                  >
+                    <i class="fa fa-arrow-left me-2"></i> Cancel
+                  </a>
+                </div>
+                <div class="col-md-6 col-6 text-center">
+                  <a href="./HelpDesk.html" class="btn btn-success btn-lg mt-3">
+                    <i class="fa fa-check me-2"></i> Save
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+    <script src="../../../resources/js/jquery.js"></script>
+    <script src="../../../resources/js/popper.min.js"></script>
+    <script src="../../../resources/js/bootstrap.min.js"></script>
+    <script src="../../../resources/js/izin.js"></script>
+    <script src="../../../resources/js/sakit.js"></script>
+    <script>
+      document.querySelector('.btn-success').addEventListener('click', function(event) {
+        event.preventDefault(); // Mencegah tindakan default tombol
+        swal({
+          title: "Tugas Berhasil Ditambahkan!",
+          text: "Tugas telah ditambahkkan!",
+          icon: "success",
+          button: "OK"
+        }).then(() => {
+          window.location.href = "./HelpDesk.html";
+        });
+      });
+    </script>
+    <script>
+      // JavaScript to toggle sidebar visibility
+      $(document).ready(function () {
+        $(".navbar-toggler").click(function () {
+          $("#wrapper").toggleClass("toggled");
+        });
+      });
+    </script>
+
+  </body>
+</html>
